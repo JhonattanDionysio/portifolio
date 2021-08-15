@@ -2,7 +2,7 @@
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css);
 
-*{
+*{                       /* body */
     margin: 0;
     padding: 0;
 }
@@ -60,7 +60,7 @@ header{
     font-family: "Josefin Slab", serif;
     color: #fff;
     font-size: 2rem;
-    text-shadow: .2rem .4rem rgba(0,0,0,.4);
+    text-shadow: .13rem .1rem rgba(0,0,0,.4);
     margin-bottom: 2rem;
     opacity: 0;
     animation: noveBanner 1s 0.7s forwards;
@@ -74,7 +74,7 @@ header{
     background: #ED213A;
     background: -webkit-linear-gradient(to right, #93291E, #ED213A);
     background: linear-gradient(to left, #93291E, #ED213A);
-    padding: 1rem 3rem;
+    padding: .7rem 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
