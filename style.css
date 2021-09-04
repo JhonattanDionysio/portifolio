@@ -21,11 +21,15 @@
     position: fixed;
     z-index: 100;
     right: 2rem;
-    top: 2;
+    top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+}
+
+.show-menu .hamburguer{
+    right: 16rem;
 }
 
 .line{
@@ -33,6 +37,49 @@
     height: .1rem;
     background-color: #fff;
     box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
+}
+
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(.3rem, .45rem);
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.45rem);;
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ED213A;
+    color:#ffffff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #ED213A;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span{
+    opacity: 1;
 }
 
 header{
@@ -88,7 +135,7 @@ header{
     font-family: var(--font-secundary);
     color: #fff;
     font-size: 2rem;
-    text-shadow: .13rem .1rem rgba(0,0,0,.4);
+    text-shadow: .2rem .2rem rgba(0,0,0,.4);
     margin-bottom: 2rem;
     opacity: 0;
     animation: noveBanner 1s 0.7s forwards;
@@ -102,7 +149,7 @@ header{
     background: #ED213A;
     background: -webkit-linear-gradient(to right, #93291E, #ED213A);
     background: linear-gradient(to left, #93291E, #ED213A);
-    padding: .7rem 2rem;
+    padding: .45rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -131,6 +178,11 @@ header{
     background-color: #fff;
     position: fixed;
     top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+
+.show-menu .sidebar{
     right: 0;
 }
 
@@ -143,6 +195,7 @@ header{
 
 .menu-item{
     text-align: center;
+    margin-bottom: .3rem;
 
 }
 
